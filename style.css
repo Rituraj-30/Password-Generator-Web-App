@@ -1,0 +1,211 @@
+   :root {
+      --bg-dark: #0f0f0f;
+      --card-dark: #1e1e1e;
+      --accent-red: #ff3c3c;
+      --accent-blue: #007bff;
+      --text-light: #ffffff;
+      --text-gray: #cccccc;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      font-family: 'League Spartan', sans-serif;
+    }
+
+    .outside-div {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--bg-dark);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 450px;
+      background-color: var(--card-dark);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    h1 {
+      color: var(--text-light);
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    /* Display password */
+    .display-container {
+      position: relative;
+      background-color: #111;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+      padding: 0.85rem 0.75rem;
+    }
+
+    .display {
+      width: 100%;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--text-light);
+      font-size: 1rem;
+      padding-right: 2.5rem;
+    }
+
+    .display::placeholder {
+      color: var(--text-gray);
+    }
+
+    /* Copy button */
+    .display-container button {
+      position: absolute;
+      top: 50%;
+      right: 0.75rem;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .tooltip {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .copy-icon {
+      width: 22px;
+      filter: invert(100%);
+      transition: opacity 0.3s;
+    }
+
+    .copy-msg {
+      color: var(--text-light);
+      font-size: 0.85rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .copy-msg.active {
+      opacity: 1;
+    }
+
+    .copy-icon.hide {
+      opacity: 0;
+    }
+
+    /* Input container */
+    .input-container {
+      margin-top: 1rem;
+    }
+
+    .length-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text-light);
+      margin-bottom: 0.5rem;
+    }
+
+    .length-container p:last-child {
+      color: var(--text-gray);
+    }
+
+    /* Slider */
+    .slider {
+      width: 100%;
+      height: 6px;
+      border-radius: 6px;
+      appearance: none;
+      background: #444;
+      margin-bottom: 1rem;
+    }
+
+    .slider::-webkit-slider-thumb {
+      appearance: none;
+      height: 18px;
+      width: 18px;
+      border-radius: 50%;
+      background: var(--accent-blue);
+      cursor: pointer;
+    }
+
+    .slider::-moz-range-thumb {
+      height: 18px;
+      width: 18px;
+      border-radius: 50%;
+      background: var(--accent-blue);
+      cursor: pointer;
+    }
+
+    /* Checkboxes */
+    .input-container .check {
+      display: flex;
+      align-items: center;
+      margin: 0.5rem 0;
+      color: var(--text-light);
+    }
+
+    .input-container input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      margin-right: 0.5rem;
+      accent-color: var(--accent-blue);
+      cursor: pointer;
+    }
+
+    /* Strength container */
+    .strength-container {
+      margin-top: 1rem;
+      color: var(--text-light);
+      font-size: 1rem;
+      padding: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .strength-status {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .strength-status p {
+      margin: 0;
+      font-weight: bold;
+    }
+
+    .strength-status div[data-indicator-color] {
+      width: 0.9rem;
+      height: 0.9rem;
+      border-radius: 50%;
+    }
+
+    /* Generate Button */
+    .Generate {
+      width: 100%;
+      padding: 0.75rem;
+      background: var(--accent-red);
+      color: var(--text-light);
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: background 0.2s ease-in-out;
+    }
+
+    .Generate:hover {
+      background: #e03232;
+    }
